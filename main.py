@@ -9,8 +9,7 @@ def getnum(event):
         cnt = chisel.get() - len(mask.get())
     ac = ''
     for a in range(cnt):
-        g = randrange(0, 9)
-        ac += str(g)
+        ac += str(randrange(0, 9))
     innEntry.delete(0, END)
     innEntry.insert(0, mask.get() + ac)
 
