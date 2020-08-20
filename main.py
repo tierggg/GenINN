@@ -22,6 +22,7 @@ def buffer(event):
 
 root = Tk()
 root.title('ИНН')
+root.geometry("300x250")
 root.resizable(False, False)
 
 mainframe = Frame()
@@ -34,15 +35,15 @@ innFrame = Frame(mainframe)
 innFrame.pack()
 
 chisel = IntVar(root)
-chiselLabel = Label(entryframe, font='Arial 14',  justify='right', text='Количество\nцифр')
+chiselLabel = Label(entryframe, font='Arial 14',  justify='right', text='Количество цифр')
 chiselLabel.grid(row=0, column=0, sticky=E)
 chiselEntry = Entry(entryframe, font='Arial 14', justify='center', textvariable=chisel, width=4)
 chiselEntry.grid(row=0, column=1, sticky=W)
 
 mask = StringVar(root)
-maskLabel = Label(entryframe, font='Arial 14', text='Первые\nцифры')
+maskLabel = Label(entryframe, font='Arial 14', text='Первые цифры')
 maskLabel.grid(row=1, column=0, sticky=E)
-maskEntry = Entry(entryframe, font='Arial 14', justify='center', textvariable=mask, width=10)
+maskEntry = Entry(entryframe, font='Arial 14', justify='center', textvariable=mask, width=8)
 maskEntry.grid(row=1, column=1, sticky=W)
 
 nLabel = Label(entryframe, text='\n', font='Arial 8')
