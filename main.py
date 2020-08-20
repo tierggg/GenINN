@@ -22,17 +22,21 @@ def buffer(event):
 
 root = Tk()
 root.title('ИНН')
-root.geometry("300x250")
+root.geometry('300x270')
 root.resizable(False, False)
 
 mainframe = Frame()
 mainframe.pack(fill=X)
+
+n3Label = Label(mainframe, text='\n', font='Arial 2')
+n3Label.pack()
 
 entryframe = Frame(mainframe)
 entryframe.pack()
 
 innFrame = Frame(mainframe)
 innFrame.pack()
+
 
 chisel = IntVar(root)
 chiselLabel = Label(entryframe, font='Arial 14',  justify='right', text='Количество цифр')
